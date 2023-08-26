@@ -30,10 +30,7 @@ Node * createNode(void * data) {
 
 List * createList() {
   list* nuevaLista=(List*)malloc(sizeof(List));
-  if (nuevaLista==NULL) {
-      printf("Error: No se pudo asignar memoria para la lista.\n");
-      exit(EXIT_FAILURE);
-    }  else{
+  if (nuevaLista!=NULL) {
       nuevaLista->head=NULL;
       nuevaLista->tail=NULL;
       nuevaLista->current=NULL;
