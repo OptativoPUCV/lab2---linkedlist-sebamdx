@@ -33,8 +33,11 @@ List * createList() {
   if (nuevaLista==NULL) {
       printf("Error: No se pudo asignar memoria para la lista.\n");
       exit(EXIT_FAILURE);
+    }  else{
+      nuevaLista->head=NULL;
+      nuevaLista->tail=NULL;
+      nuevaLista->current=NULL;
     }
-  nuevaLista->head=NULL;
   return nuevaLista;
 }
 
@@ -56,7 +59,11 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    return NULL;
+  if (list != NULL && list->current != NULL && list->current->prev != NULL) {
+    list->current = list->current->prev;
+    return list->current->data;
+  }
+  return NULL;
 }
 
 void * prevList(List * list) {
