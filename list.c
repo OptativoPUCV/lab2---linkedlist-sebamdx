@@ -28,12 +28,21 @@ Node * createNode(void * data) {
     return new;
 }
 
-List * createList() {
-     return NULL;
+List * createList() 
+{
+  list* nuevaLista=(List*)malloc(sizeof(List));
+  if (nuevaLista==NULL) {
+      printf("Error: No se pudo asignar memoria para la lista.\n");
+      exit(EXIT_FAILURE);
+    }
+  nuevaLista->head=NULL;
+  return nuevaLista;
 }
 
-void * firstList(List * list) {
-    return NULL;
+void * firstList(List * list) 
+{
+  
+  return NULL;
 }
 
 void * nextList(List * list) {

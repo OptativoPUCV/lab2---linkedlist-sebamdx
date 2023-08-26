@@ -2,3 +2,24 @@ Fri 25 Aug 2023 07:41:55 PM UTC:
  tests:  0|6
 total_score: 0/70
 989907c
+Sat 26 Aug 2023 12:36:37 AM UTC: 
+ list.c | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:33:3: error: unknown type name ‘list’; did you mean ‘List’?
+   33 |   list* nuevaLista=(List*)malloc(sizeof(List));
+      |   ^~~~
+      |   List
+list.c:33:20: error: initialization of ‘int *’ from incompatible pointer type ‘List *’ {aka ‘struct List *’} [-Werror=incompatible-pointer-types]
+   33 |   list* nuevaLista=(List*)malloc(sizeof(List));
+      |                    ^
+list.c:38:13: error: request for member ‘head’ in something not a structure or union
+   38 |   nuevaLista->head=NULL;
+      |             ^~
+list.c:39:10: error: returning ‘int *’ from a function with incompatible return type ‘List *’ {aka ‘struct List *’} [-Werror=incompatible-pointer-types]
+   39 |   return nuevaLista;
+      |          ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f9cd910
