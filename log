@@ -119,3 +119,9 @@ list.c:38:10: error: returning ‘int *’ from a function with incompatible ret
 cc1: all warnings being treated as errors
 Compilation failed
 4acd737
+Sat 26 Aug 2023 02:00:58 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+e350e39
